@@ -1,0 +1,58 @@
+GET http://localhost:3000/products
+
+
+###
+GET http://localhost:3000/products/3
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": 100
+}
+
+###
+PATCH http://localhost:3000/products/3
+Content-Type: application/json
+
+{
+    "name": "Product 1 changed"
+}
+
+###
+DELETE http://localhost:3000/products/2
+
+
+###
+GET http://localhost:3000/stock-inputs
+
+###
+GET http://localhost:3000/stock-inputs/1
+
+###
+POST http://localhost:3000/stock-inputs
+Content-Type: application/json
+
+{
+    "product_id": 3,
+    "quantity": 10,
+    "date": "2000-01-01"
+}
+
+###
+GET http://localhost:3000/stock-outputs
+
+###
+GET http://localhost:3000/stock-outputs/1
+
+###
+POST http://localhost:3000/stock-outputs
+Content-Type: application/json
+
+{
+    "product_id": 3,
+    "quantity": 10,
+    "date": "2000-01-01"
+}
